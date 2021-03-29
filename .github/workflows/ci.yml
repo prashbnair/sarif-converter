@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: CRDA Scan
     steps: 
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
         with:
